@@ -31,7 +31,7 @@ export async function PATCH(
     await connectDB();
 
     const { id } = await context.params;
-
+    
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return NextResponse.json(
         { error: "invalid student id" },
